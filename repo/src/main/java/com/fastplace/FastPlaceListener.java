@@ -195,7 +195,7 @@ public class FastPlaceListener implements Listener {
                 || type == Material.VOID_AIR
                 || type == Material.WATER
                 || type == Material.LAVA
-                || type == Material.GRASS
+                || type == Material.SHORT_GRASS
                 || type == Material.TALL_GRASS
                 || type == Material.SNOW
                 || type == Material.VINE;
