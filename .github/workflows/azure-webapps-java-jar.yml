@@ -21,7 +21,7 @@ name: Build and deploy JAR app to Azure Web App
 
 env:
   AZURE_WEBAPP_NAME: your-app-name    # set this to the name of your Azure Web App
-  JAVA_VERSION: '11'                  # set this to the Java version to use
+  JAVA_VERSION: '21'                  # set this to the Java version to use
   DISTRIBUTION: zulu                  # set this to the Java distribution
 
 on:
@@ -47,13 +47,14 @@ jobs:
           cache: 'maven'
 
       - name: Build with Maven
+        working-directory: repo
         run: mvn clean install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/repo/target/*.jar'
 
   deploy:
     permissions:
