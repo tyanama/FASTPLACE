@@ -1,0 +1,16 @@
+# FastPlace 設定ファイル
+
+# 1回のドラッグ操作で設置できる最大ブロック数
+max-blocks-per-drag: 64
+
+# 設置時にインベントリのブロックを消費するか (false = 消費しない / クリエイティブ的動作)
+consume-blocks: true
+
+# ゲームモードがサバイバル/アドベンチャーのみ有効にするか
+survival-only: false
+
+# 設置間隔の最小距離 (ブロック単位) - 同じブロックに二重設置しないための設定
+min-place-interval-ticks: 1
+
+# デバッグモード (コンソールに詳細ログを出力)
+debug: false

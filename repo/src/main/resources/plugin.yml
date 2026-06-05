@@ -1,0 +1,20 @@
+name: FastPlace
+version: 1.0.0
+main: com.fastplace.FastPlacePlugin
+api-version: "1.21"
+description: スニーク+ドラッグで複数ブロックを連続設置するプラグイン
+author: FastPlace
+
+permissions:
+  fastplace.use:
+    description: FastPlaceの連続設置機能を使用できる
+    default: true
+  fastplace.admin:
+    description: FastPlaceの管理コマンドを使用できる
+    default: op
+
+commands:
+  fastplace:
+    description: FastPlaceの設定コマンド
+    usage: /fastplace <reload|toggle|info>
+    permission: fastplace.use
